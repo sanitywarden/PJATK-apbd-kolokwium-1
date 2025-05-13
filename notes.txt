@@ -1,4 +1,0 @@
-Models are for database models - kind of like ORM
-Services are "good patterns" - There is a service which does work which implements a interface of the service
-    Example: Database implements IDatabaseService
-Controllers work with web requests
