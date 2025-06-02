@@ -12,7 +12,7 @@ public class Program
         var builder = WebApplication.CreateBuilder(args);
         
         // Dependency injection
-        builder.Services.AddScoped<IDatabaseService, Database>();
+        builder.Services.AddScoped<IDatabaseService, DatabaseService>();
         
         // Register controller services
         builder.Services.AddControllers();
@@ -23,6 +23,5 @@ public class Program
         app.MapControllers();
 
         app.Run();
-
     }
 }
