@@ -1,16 +1,36 @@
 namespace kolokwium_1.Models
 {
-    public class Something
+    public class ClientData
     {
-        public int id { get; set; }
-        public DateTime date { get; set; }
+        public int Id { get; set; }
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+        public string Address { get; set; }
+        public List<Rental> Rentals { get; set; }
     }
 
-    public class Trip
+    public class Rental
     {
-        public int IdClient { get; set; }
-        public int IdTrip { get; set; }
-        public int RegisteredAt { get; set; }
-        public int PaymentDate { get; set; }
+        public string Vin { get; set; }
+        public string Color { get; set; }
+        public string Model { get; set; }
+        public DateTime DateFrom { get; set; }
+        public DateTime DateTo { get; set; }
+        public int TotalPrice { get; set; }
+    }
+
+    public class RentalRequest
+    {
+        public ClientDto Client { get; set; }
+        public int CarId { get; set; }
+        public DateTime DateFrom { get; set; }
+        public DateTime DateTo { get; set; }
+    }
+
+    public class ClientDto
+    {
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+        public string Address { get; set; }
     }
 }
